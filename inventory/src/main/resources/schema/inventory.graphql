@@ -1,0 +1,12 @@
+type Query {
+    getInventories : [Inventory]
+}
+
+type Inventory {
+    count: Int
+    product: Product
+}
+
+type Product @key(fields: "id") @extends {
+    id: Int @external
+}
